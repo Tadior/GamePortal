@@ -1,0 +1,37 @@
+@import "normalize.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+li {
+  list-style: none;
+}
+
+#root {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
