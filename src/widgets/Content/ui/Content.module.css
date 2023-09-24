@@ -1,5 +1,8 @@
 .Content {
+  margin: 20px 0;
+}
+.ContentWrapper {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 150px;
   gap: 20px;
 }

@@ -1,3 +1,28 @@
 .Header {
-  background: blue;
+  background: var(--main-color);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.HeaderWrapper {
+  display: flex;
+  align-items: center;
+}
+.LogoImg {
+}
+.Link {
+  color: var(--main-text-color);
+  font-weight: 500;
+  font-size: 18px;
+  transition: all ease var(--base-transition);
+}
+.Link:hover {
+  color: var(--active-color);
+}
+.Navigation {
+  margin-left: 30px;
+}
+.List {
+  display: flex;
+  align-items: center;
 }
