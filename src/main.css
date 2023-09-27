@@ -46,6 +46,9 @@ li {
   background-size: cover;
   z-index: 1;
 }
+#headlessui-portal-root {
+  display: none;
+}
 
 .container {
   max-width: 1250px;

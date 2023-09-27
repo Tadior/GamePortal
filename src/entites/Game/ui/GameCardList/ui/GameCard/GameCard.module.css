@@ -13,6 +13,9 @@
   color: var(--main-text-color);
   height: 250px;
   background: linear-gradient(90deg, var(--active-color), var(--main-color));
+  @media (max-width: 450px) {
+    height: 190px;
+  }
 }
 .GenresList {
   display: flex;

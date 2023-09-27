@@ -1,0 +1,56 @@
+.gamePage {
+  height: 100%;
+  /* max-width: 1030px; */
+}
+.Wrapper {
+  /* display: flex; */
+  /* flex: 1 0 auto; */
+  /* overflow: hidden; */
+  display: grid;
+  grid-template-columns: minmax(250px, 300px) minmax(320px, 1fr);
+  /* grid-template-columns: 300px 1fr; */
+  /* max-width: 800px; */
+  /* width: 100%; */
+  /* display: flex; */
+  gap: 30px;
+  @media (max-width: 450px) {
+    grid-template-columns: 1fr;
+  }
+}
+.Thumbnail {
+  height: 250px;
+  top: 60px;
+  position: sticky;
+  @media (max-width: 450px) {
+    height: 200px;
+    position: static;
+  }
+  /* flex: 0 1 300px; */
+}
+.Image {
+  width: 100%;
+  object-fit: fill;
+  height: 100%;
+}
+.Info {
+  max-width: 700px;
+  /* flex: 0 1 700px; */
+  width: 100%;
+}
+.List {
+  margin-top: 15px;
+}
+.ListItem {
+  margin-top: 10px;
+}
+.Carousel {
+  margin-top: 15px;
+}
+.Requirements {
+  margin-top: 10px;
+}
+.RequirementsItem {
+  margin-top: 5px;
+  list-style-type: circle;
+  margin-left: 20px;
+}

@@ -9,6 +9,7 @@ export interface mainState {
   page: number;
   category: CategoriesType;
   sortBy: SortByType;
+  isFiltersVisible: boolean;
 }
 
 const initialState: mainState = {
@@ -16,6 +17,7 @@ const initialState: mainState = {
   page: 0,
   category: CATEGORIES[0],
   sortBy: SORT_BY[0],
+  isFiltersVisible: true,
 };
 
 export const mainSlice = createSlice({
@@ -34,10 +36,19 @@ export const mainSlice = createSlice({
     setSortBy: (state, action: PayloadAction<SortByType>) => {
       state.sortBy = action.payload;
     },
+    switchFiltersVisible: (state, action: PayloadAction<boolean>) => {
+      state.isFiltersVisible = action.payload;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { setGames, setPage, setCategory, setSortBy } = mainSlice.actions;
+export const {
+  setGames,
+  setPage,
+  setCategory,
+  setSortBy,
+  switchFiltersVisible,
+} = mainSlice.actions;
 
 export default mainSlice.reducer;

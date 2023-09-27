@@ -1,8 +1,13 @@
 .Content {
   margin: 20px 0;
+  position: relative;
 }
 .ContentWrapper {
   display: grid;
   grid-template-columns: auto 150px;
   gap: 20px;
+  height: 100%;
+  @media (max-width: 450px) {
+    grid-template-columns: 1fr;
+  }
 }

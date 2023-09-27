@@ -1,6 +1,8 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { BASE_URL } from "../../consts/URL";
 import { Game } from "../../types/Game";
+import { url } from "inspector";
+import { GameInfo } from "../../types/GameInfo";
 
 export const gamesApi = createApi({
   reducerPath: "gamesApi",
@@ -28,9 +30,19 @@ export const gamesApi = createApi({
         },
       ],
     }),
+    getGameById: builder.query<GameInfo, { id: string }>({
+      query: (arg) => {
+        return {
+          url: "game",
+          params: {
+            id: arg.id,
+          },
+        };
+      },
+    }),
   }),
 });
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetGamesQuery } = gamesApi;
+export const { useGetGamesQuery, useGetGameByIdQuery } = gamesApi;
